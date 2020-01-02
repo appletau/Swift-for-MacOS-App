@@ -13,9 +13,10 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Objective_CClass.printHello()
-        let object = Objective_CClass()
-        print(object.sayHello())
+        let uartController = UART()
+        for port in uartController.uartList() {
+            print(port)
+        }
         // Do any additional setup after loading the view.
     }
 
