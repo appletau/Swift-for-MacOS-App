@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E210908423BDE977003514C4 /* IACFactoryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E210908123BDE760003514C4 /* IACFactoryFramework.framework */; };
 		E210908623BDE9C7003514C4 /* IACFactoryFramework.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = E210908123BDE760003514C4 /* IACFactoryFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E210908A23BDF63B003514C4 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = E210908923BDF63B003514C4 /* Device.m */; };
+		E210908E23BDF68B003514C4 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = E210908D23BDF68B003514C4 /* Utility.m */; };
+		E210909123BDF6A1003514C4 /* RegxFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = E210909023BDF6A1003514C4 /* RegxFunc.m */; };
 		E2F08ADE23BAF64A00B7D00D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F08ADD23BAF64A00B7D00D /* AppDelegate.swift */; };
 		E2F08AE023BAF64A00B7D00D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F08ADF23BAF64A00B7D00D /* ViewController.swift */; };
 		E2F08AE223BAF64C00B7D00D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F08AE123BAF64C00B7D00D /* Assets.xcassets */; };
@@ -41,6 +44,12 @@
 
 /* Begin PBXFileReference section */
 		E210908123BDE760003514C4 /* IACFactoryFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IACFactoryFramework.framework; sourceTree = "<group>"; };
+		E210908823BDF63B003514C4 /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		E210908923BDF63B003514C4 /* Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		E210908C23BDF68B003514C4 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		E210908D23BDF68B003514C4 /* Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		E210908F23BDF6A1003514C4 /* RegxFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegxFunc.h; sourceTree = "<group>"; };
+		E210909023BDF6A1003514C4 /* RegxFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegxFunc.m; sourceTree = "<group>"; };
 		E2F08ADA23BAF64A00B7D00D /* Swift for MacOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift for MacOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F08ADD23BAF64A00B7D00D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2F08ADF23BAF64A00B7D00D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +80,27 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		E210908723BDF347003514C4 /* metaClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E210908B23BDF664003514C4 /* Utilities */,
+				E210908823BDF63B003514C4 /* Device.h */,
+				E210908923BDF63B003514C4 /* Device.m */,
+			);
+			path = metaClasses;
+			sourceTree = "<group>";
+		};
+		E210908B23BDF664003514C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E210908C23BDF68B003514C4 /* Utility.h */,
+				E210908D23BDF68B003514C4 /* Utility.m */,
+				E210908F23BDF6A1003514C4 /* RegxFunc.h */,
+				E210909023BDF6A1003514C4 /* RegxFunc.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E2F08AD123BAF64A00B7D00D = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +120,7 @@
 		E2F08ADC23BAF64A00B7D00D /* Swift for MacOS App */ = {
 			isa = PBXGroup;
 			children = (
+				E210908723BDF347003514C4 /* metaClasses */,
 				E210907623BDE2A8003514C4 /* Lib */,
 				E2F08ADD23BAF64A00B7D00D /* AppDelegate.swift */,
 				E2F08ADF23BAF64A00B7D00D /* ViewController.swift */,
@@ -175,7 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E210908E23BDF68B003514C4 /* Utility.m in Sources */,
+				E210908A23BDF63B003514C4 /* Device.m in Sources */,
 				E2F08AE023BAF64A00B7D00D /* ViewController.swift in Sources */,
+				E210909123BDF6A1003514C4 /* RegxFunc.m in Sources */,
 				E2F08ADE23BAF64A00B7D00D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

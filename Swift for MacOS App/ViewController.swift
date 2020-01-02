@@ -13,11 +13,18 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var device:Device?
         let uartController = UART()
-        for port in uartController.uartList() {
-            print(port)
+        for path in uartController.uartList() {
+            guard let path = path as? String else {continue}
+            print(path)
+            guard path.contains("serial") else {continue}
+            device = Device(path, speed: 115200, flowCtrl: false, parityCtrl: false)
         }
-        // Do any additional setup after loading the view.
+        if let device = device {
+            device.write(toDevice: "hello")
+            print("Resp:\(device.readFromDevice())")
+        }
     }
 
     override var representedObject: Any? {
